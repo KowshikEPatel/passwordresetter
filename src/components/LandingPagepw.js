@@ -30,7 +30,7 @@ export default function LandingPage(){
              <div class="card-body">
                      <h4 class="card-title">Reset your password</h4>
                    <h5>Username</h5>
-                   <input type="text" width="100px" className="form-control" style={{marginBottom:"15px"}} onChange={handleChangeUser}></input>
+                   <input type="text" width="100px" className="form-control" style={{marginBottom:"15px"}} onChange={handleChangeUser}  value={username}></input>
                    
              </div>
         </div>
