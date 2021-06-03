@@ -1,15 +1,13 @@
 import {useState} from 'react'
-import {Link} from 'react-router-dom'
+/*import {Link} from 'react-router-dom'*/
 
 export default function LandingPage(){
 
-    const [username,setUsername] = useState("") 
+    /*
     const [passwords,setPasswords] = useState("")
     const [resetRequested,setResetRequested] = useState(false)
 
-    function handleChangeUser(event){
-            setUsername(event.target.value)
-    }
+    
 
     function handleChangePassword(event){
             setPasswords(event.target.value)
@@ -19,7 +17,12 @@ export default function LandingPage(){
         setResetRequested(event.target.value)
     }
 
-    const cred = {username,passwords,resetRequested}
+    const cred = {username,passwords,resetRequested}*/
+    
+    const [username,setUsername] = useState("") 
+    function handleChangeUser(event){
+        setUsername(event.target.value)
+}
 
 
     return  <>
