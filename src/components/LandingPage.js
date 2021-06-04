@@ -36,7 +36,7 @@ export default function LandingPage(){
              },
              body:JSON.stringify({
                  "user_name":username,
-                 "password":password
+                 "password":passwords
              })
          })
          .then(response=>{
