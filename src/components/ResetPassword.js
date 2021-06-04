@@ -16,6 +16,6 @@ export default function ResetPassword(){
      useEffect(()=>{
         setUrlstring(str)
         exec()
-    },[str,exec])
+    },[str])
     return <div> Now shing the following page {str}<div>{JSON.stringify(user)}</div></div>
   }
