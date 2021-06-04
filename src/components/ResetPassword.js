@@ -26,7 +26,13 @@ export default function ResetPassword(){
 
     const sendNewPassword=()=>{
 
-        fetch(`https://kp-passwordresetter.herokuapp.com/resetpassword/:${str}`)
+        fetch(`https://kp-passwordresetter.herokuapp.com/resetpassword/${str}`,{
+            method:'POST',
+            headers: {
+                'Content-Type': 'application/json'
+              },
+            body:JSON.stringify({"password":password})
+        })
         .then(response=>response.json())
         .then(data=>console.log(data))
     }
@@ -35,7 +41,7 @@ export default function ResetPassword(){
     <div className="card-body">
             <h4 className="card-title">Enter your new password</h4>
           <h5>Password</h5>
-          <input type="text" width="100px" className="form-control" style={{marginBottom:"15px"}}  onChange={handleChangePassword} value={password}></input>
+          <input type="password" width="100px" className="form-control" style={{marginBottom:"15px"}}  onChange={handleChangePassword} value={password}></input>
           <h5>Confirm Password</h5>
           <input type="password" width="100px" className="form-control" style={{marginBottom:"15px"}} onPointerOut={comparepasswords} onChange={handleChangeConfirmPassword} value={confirmPassword}></input>
                <div style={{textAlign:"right"}}>
