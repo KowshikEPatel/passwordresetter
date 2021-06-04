@@ -14,7 +14,7 @@ export default function ResetPassword(){
         fetch(`https://blissful-rosalind-539ba2.netlify.app/${urlstring}`)
         .then(response=>response.json())
         .then(data=>setUser(data))
-    },[])
+    })
 
 
     return <div> Now shing the following page {str}<div>{JSON.stringify(user)}</div></div>
