@@ -10,7 +10,7 @@ export default function ResetPassword(){
     const [user,setUser] = useState(null)
    
     useEffect(()=>{
-        fetch(`https://kp-passwordresetter.herokuapp.com/${str}`)
+        fetch(`https://kp-passwordresetter.herokuapp.com/resetpassword/`)
             .then(response=>response.json())
             .then(data=>{setUser(data)})
     },[])
