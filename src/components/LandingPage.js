@@ -36,7 +36,7 @@ export default function LandingPage(){
                    <h5>Password</h5>
                    <input type="password" width="100px" className="form-control" style={{marginBottom:"15px"}} onChange={handleChangePassword} value={passwords}></input>
                    <Link to='/forgotpw'><small> Forgot password? </small></Link>
-                   <Link to='/resetpassword/1234'><small> reset page </small></Link>
+                   <Link to='/resetpassword/12346'><small> reset page </small></Link>
                         <div style={{textAlign:"right"}}>
                         <button className="btn btn-secondary">Login</button>
                         <p>New user? Sign up</p>
