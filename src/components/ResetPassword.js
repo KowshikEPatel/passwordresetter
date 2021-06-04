@@ -5,12 +5,13 @@ import {useState,useEffect} from 'react'
 
 export default function ResetPassword(){
 
-    
+    let { str } = useParams();
+    const [urlstring,setUrlstring] = useState()
     const [user,setUser] = useState({})
-
+    setUrlstring(str)
     useEffect(()=>{
-        let { str } = useParams();
-        fetch(`https://blissful-rosalind-539ba2.netlify.app/${str}`)
+       
+        fetch(`https://blissful-rosalind-539ba2.netlify.app/${urlstring}`)
         .then(response=>response.json())
         .then(data=>setUser(data))
     },[])
