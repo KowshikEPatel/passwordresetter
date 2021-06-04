@@ -6,18 +6,34 @@ import Topbar from './components/Topbar'
 import {
   BrowserRouter as Router,
 Switch,
-Route
+Route,
+useParams
 } from 'react-router-dom' 
 import './App.css';
 
 //{<Route exact path="/"><Dashboard/><UserList/></Route>}
+
+function ResetPassword(){
+  let { str } = useParams();
+  return <div> Now shing the following page {str}</div>
+}
+
+
 function App() {
+  
   return (<>
     <Router>
     <Topbar />
     <Switch>
-          <Route exact path="/"><LandingPage/></Route>
-          <Route exact path="/forgotpw"><LandingPagepw/></Route>
+          <Route exact path="/">
+            <LandingPage/>
+          </Route>
+          <Route exact path="/forgotpw">
+            <LandingPagepw/>
+          </Route>
+          <Route path="/resetpassword/:str">
+            <ResetPassword />
+          </Route>
     </Switch>
     </Router>
     </>
