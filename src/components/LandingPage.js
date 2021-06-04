@@ -29,7 +29,7 @@ export default function LandingPage(){
      }
 
      function getuser(){
-         fetch('',{
+         fetch('https://kp-passwordresetter.herokuapp.com/',{
              method:'POST',
              headers:{
                 'Content-Type': 'application/json'
